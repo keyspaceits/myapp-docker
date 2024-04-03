@@ -1,6 +1,5 @@
 FROM ubuntu:latest
-RUN apt update
-RUN apt -y install apache2
+RUN apt update && apt -y install apache2
 COPY . /var/www/html/
 WORKDIR /var/www/html
 EXPOSE 80
